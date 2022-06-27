@@ -1,0 +1,44 @@
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.card-margin{
+  width: 18rem;
+  margin: 2%;
+  padding: 3%;
+}
+
+
+.btn-center{
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/*.positive-perf{
+  background: rgb(65,255,0);
+  background: linear-gradient(90deg, rgba(65,255,0,1) 0%, rgba(24,56,0,0.28084737312893904) 100%);
+  color: white;
+  margin:  0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+}
+
+.negative-perf{
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(56,0,0,0.4433123591233369) 100%);;
+  color: white;
+  margin:  0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+}
+*/

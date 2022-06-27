@@ -1,0 +1,31 @@
+.home-container{
+  background-color: 	#092344ed;
+  border-radius: 7px;
+  padding: 0;
+
+}
+
+.home-text {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+
+.homepage-section{
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.homepage-section:hover {
+  background-color: 	#092344ed;
+}
+
+.index-button{
+width: 25%;
+margin: 0 auto;
+}

@@ -1,0 +1,74 @@
+<div *ngIf="loader.loading$ | async">
+  <mat-progress-spinner [mode]="'indeterminate'"></mat-progress-spinner>
+</div>
+
+
+<div class="text-center">
+  <button class="btn btn-primary my-3" (click)="goBack()">
+    <fa-icon icon="arrow-left"></fa-icon>
+  </button>
+
+</div>
+
+
+
+<div class="text-center" *ngIf="callAPIError">
+  Erreur {{ callAPIError.status}}
+  <p class="text-danger"> {{callAPIError.statusText}} </p>
+</div>
+
+<div *ngIf="singleStock">
+
+  <div  class="card text-center">
+    <div class="card-header">
+      Details de l'action {{stockName.name}}
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">{{singleStock.name}}</h5>
+      <p>Ouvert:  {{singleStock.results[0].o}}</p>
+      <p>Fermé: {{singleStock.results[0].c}}</p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--
+&lt;!&ndash;TODO: Create app-stock-performance module&ndash;&gt;
+<button class="btn btn-info btn-center my-3" (click)="togglePerfShow()">Get Performance</button>
+
+<div *ngIf="isPerfShown">
+
+
+  <div class="perf positive-perf" *ngIf="perfResult[0], else negativePerformance">
+  <h3>Performance positive</h3>
+  <fa-icon class="icon-perf" icon="angle-up"></fa-icon>
+  <p>Hausse de {{perfResult[1]}} % </p>
+  </div>
+
+
+  <ng-template  #negativePerformance>
+  <div class="perf negative-perf">
+  <h3>Performance négative</h3>
+  <fa-icon class="icon-perf" icon="angle-down"></fa-icon>
+  <p>Baisse de {{perfResult[1]}}</p>
+  </div>
+  </ng-template>
+
+</div>
+-->
+
+<!--<button (click)="switchData()">Switch</button>-->
+
+<app-stock-performance [apiData]="apiData"> </app-stock-performance>
+
+
+<app-stock-chart></app-stock-chart>
+
+
+
+
+<!--<button class="btn btn-dark" (click)="switchData()">Switch</button>-->
